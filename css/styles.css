@@ -956,6 +956,10 @@ body {
     color: var(--accent-color);
 }
 
+.form-policy:focus {
+    outline: 2px solid var(--accent-color);
+}
+
 .form-send-btn {
     width: 200px;
     height: 50px;
@@ -971,6 +975,9 @@ body {
     color: var(--primary-light);
 }
 
-.form-send-btn:hover .form-send-btn:focus {
+.form-send-btn:hover,
+.form-send-btn:focus {
     background: var(--btn-color);
+    outline: transparent;
+    border: 2px solid var(--accent-color);
 }
