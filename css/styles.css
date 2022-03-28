@@ -480,7 +480,7 @@ body {
 /* footer-logo */
 
 .footer-logo {
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
     color: var(--primary-light);
 }
@@ -495,7 +495,8 @@ body {
 
 .container-wrapper-footer {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .footer-nav:not(:last-child) {
@@ -539,10 +540,6 @@ body {
 
 /* social-link-footer */
 
-.footer-second-part {
-    margin-right: 623px;
-}
-
 .join {
     display: block;
     margin-bottom: 20px;
@@ -581,6 +578,67 @@ body {
 
 .social-icon-footer {
     fill: var(--primary-light);
+}
+
+
+/* footer-form */
+
+.form-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-action {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+.form-subscription {
+    display: flex;
+}
+
+.footer-input {
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: rgba(47, 48, 58, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+    outline: transparent;
+}
+
+.footer-form-btn {
+    width: 200px;
+    height: 50px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--primary-light);
+    cursor: pointer;
+    outline: transparent;
+}
+
+.form-icon-footer {
+    margin-top: 13px;
+    margin-left: 10px;
+    align-self: baseline;
 }
 
 
@@ -748,4 +806,126 @@ body {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+
+/* modal-form */
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.form-action {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+    margin-bottom: 14px;
+}
+
+.form-input-wrapper {
+    display: block;
+    position: relative;
+    margin-top: 4px;
+}
+
+.form-cell {
+    display: block;
+    padding-left: 42px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-cell:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-cell:focus+.form-icon {
+    fill: var(--accent-color);
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-message {
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-message:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-message::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-check {
+    display: inline-block;
+    background: url(../images/check/checkbox.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 15px;
+}
+
+.form-agreement {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 24px;
+}
+
+.form-checkbox:checked+.form-check {
+    background: url(../images/check/icon\ check.svg);
+    background-repeat: no-repeat;
+}
+
+.form-policy {
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
+
+.form-send-btn {
+    width: 200px;
+    height: 50px;
+    background: var(--accent-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    align-self: center;
+    cursor: pointer;
+    color: var(--primary-light);
+}
+
+.form-send-btn:hover .form-send-btn:focus {
+    background: var(--btn-color);
 }
