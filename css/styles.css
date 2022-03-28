@@ -105,7 +105,7 @@ body {
 }
 
 .header-logo:focus {
-    outline: transparent;
+    outline: 1px solid var(--accent-color);
 }
 
 .logo-section {
@@ -497,7 +497,7 @@ body {
 }
 
 .footer-logo:focus {
-    outline: transparent;
+    outline: 1px solid var(--accent-color);
 }
 
 
@@ -937,6 +937,7 @@ body {
     background-repeat: no-repeat;
     width: 16px;
     height: 15px;
+    margin-right: 7px;
 }
 
 .form-agreement {
