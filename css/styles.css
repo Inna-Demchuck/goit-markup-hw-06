@@ -982,5 +982,5 @@ body {
 .form-send-btn:focus {
     background: var(--btn-color);
     outline: transparent;
-    border: 2px solid var(--accent-color);
+    border: 3px solid var(--accent-color);
 }
